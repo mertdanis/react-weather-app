@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: black;
+  font-family: "Lato", sans-serif;
+}
+
+.background-container {
+  // max-height: 90vh;
+  // width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  pointer-events: none;
+  &-img {
+    width: 25vw;
+    height: 90vh;
+    object-fit: fill;
+  }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.container {
+  display: flex;
+  z-index: 9;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  min-width: 30vw;
+  background: linear-gradient(180deg, #455783, #581a31);
+  color: white;
+  border-radius: 2rem;
+  font-size: 2rem;
+  padding: 3rem;
+  font-weight: bold;
+  &-details {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+
+    &-title {
+      margin: 2rem 0;
+    }
+  }
+
+  &-type {
+    margin: 1rem 0 0 0;
+    display: flex;
+    gap: 2rem;
+    & button {
+      border: none;
+      padding: 1rem;
+      border-radius: 1rem;
+      color: black;
+      transition: 300ms;
+      font-weight: bold;
+      font-family: inherit;
+      background: none;
+      font-size: 2rem;
+      &:hover {
+        background-color: rgb(51, 75, 51);
+        color: white;
+      }
+    }
+  }
+
+  &-top {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  &-temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    &-img {
+      display: inline-block;
+      width: 10rem;
+    }
+    &-cur {
+      background-color: red;
+    }
+  }
+
+  &-flex {
+    display: flex;
+    gap: 1rem;
+    font-size: 4rem;
+  }
+
+  &-type {
+    cursor: pointer;
+  }
+
+  &-weather {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    margin: 2rem 0;
+  }
+
+  &-input {
+    border-radius: 1rem;
+    height: 5rem;
+    text-transform: lowercase;
+    width: 25rem;
+    border: none;
+    padding: 1rem;
+    color: white;
+    transition: width 500ms;
+    font-family: inherit;
+    font-size: 2rem;
+
+    background: linear-gradient(90deg, #455783, #581a31);
+    &:focus,
+    &:active {
+      outline: none;
+      padding: 1rem;
+      width: 30rem;
+      border-bottom: 2px solid black;
+    }
+
+    &::placeholder {
+      padding: 1rem;
+      color: white;
+    }
+  }
+}
+
+.active {
+  background-color: rgb(51, 75, 51) !important;
+  color: aliceblue !important;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background: url(/public/imgs/bg-1.jpg);
+  }
+
+  .background-container {
+    display: none;
+  }
+
+  .container {
+    margin: 0 2rem;
+    min-width: 80vw;
+    max-width: max-content;
+    &-top {
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    &-flex {
+      font-size: 3rem;
+    }
+
+    &-input {
+      width: 10rem;
+      &:focus,
+      &:active {
+        width: 20rem;
+      }
+    }
+
+    &-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem !important;
+    }
+  }
+}
