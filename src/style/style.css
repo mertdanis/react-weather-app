@@ -150,6 +150,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    background: url(/react-weather-app/public/imgs/bg-1.jpg);
+  }
   .background-container {
     display: none;
   }
