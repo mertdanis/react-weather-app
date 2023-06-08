@@ -66,10 +66,10 @@ function App() {
   return (
     <div className="App">
       <div className="background-container">
-        <img className="background-container-img" src="public/imgs/bg-1.jpg" />
-        <img className="background-container-img" src="public/imgs/bg-3.jpg" />
-        <img className="background-container-img" src="public/imgs/bg-4.jpg" />
-        <img className="background-container-img" src="public/imgs/bg-6.jpg" />
+        <img className="background-container-img" src="imgs/bg-1.jpg" />
+        <img className="background-container-img" src="imgs/bg-3.jpg" />
+        <img className="background-container-img" src="imgs/bg-4.jpg" />
+        <img className="background-container-img" src="imgs/bg-6.jpg" />
       </div>
 
       <div className="container">
