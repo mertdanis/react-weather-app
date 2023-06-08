@@ -91,7 +91,7 @@ function App() {
               type="text"
               className="container-input"
               onChange={getValue}
-              placeholder="Istanbul ... "
+              placeholder="Mardin ... "
             />
           </div>
           <div className="container-flex">
